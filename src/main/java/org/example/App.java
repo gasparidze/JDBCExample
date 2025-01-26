@@ -1,17 +1,16 @@
 package org.example;
 
-import org.example.util.ConnectionManager;
+import org.example.entity.User;
+import org.example.service.UserService;
 
-import java.sql.SQLException;
-
-/**
- * Hello world!
- *
- */
 public class App {
-    public static void main( String[] args ) throws SQLException {
-        try (var connection = ConnectionManager.open()){
-            System.out.println(connection.getTransactionIsolation());
-        }
+
+    public static void main( String[] args ) {
+        UserService userService = new UserService();
+
+//        User user = userService.createUser("test firstname" , "test lastname" , "test username" , "test password");
+
+        User foundUser = userService.findById(3);
+        System.out.println(foundUser);
     }
 }
