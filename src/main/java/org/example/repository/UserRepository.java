@@ -1,13 +1,11 @@
 package org.example.repository;
 
-import org.example.entity.User;
 import org.example.util.ConnectionManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
